@@ -1,0 +1,22 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.33", features = [
+    "full",
+] } # Async runtime for networking and concurrency
+serde = { version = "1.0", features = [
+    "derive",
+] } # Serialization/deserialization
+serde_json = "1.0" # JSON support
+ring = "0.16" # Cryptography library
+futures = "0.3" # Asynchronous programming utilities
+rustls = "0.21" # TLS support
+file = "1.1.2"
+
+[dev-dependencies]
+tokio-test = "0.4" # Testing async code
